@@ -19,7 +19,7 @@ export default async ({ app } : { app: express.Application }) => {
   app.use(cors())
   app.use(bodyParser.json())
 
-  app.use(config.api.prefix,routes)
+  app.use(config.api.prefix,routes())
 
 
   if(config.logs.level === 'debug') {
